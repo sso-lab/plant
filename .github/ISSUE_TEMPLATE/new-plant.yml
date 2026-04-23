@@ -1,0 +1,86 @@
+name: 🌱 Новое растение
+description: Добавить информацию о новом питомце в коллекцию
+title: "[Растение]: "
+labels: ["plant", "new-entry"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Название растения
+      description: Например, "Сингониум Империал Вайт"
+      placeholder: "Сингониум Империал Вайт"
+    validations:
+      required: true
+
+  - type: input
+    id: latin
+    attributes:
+      label: Латинское название
+      description: Настоящее научное имя
+      placeholder: "Syngonium podophyllum 'Imperial White'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Краткое описание
+      description: Небольшая характеристика растения
+      placeholder: "Быстрорастущая лиана с уникальной вариегатной окраской..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: light
+    attributes:
+      label: 💡 Освещение
+      description: Что предпочитает растение?
+      options:
+        - Яркий, рассеянный свет
+        - Полутень
+        - Тень
+        - Яркое солнце
+    validations:
+      required: true
+
+  - type: dropdown
+    id: water
+    attributes:
+      label: 💧 Полив
+      options:
+        - Обильный
+        - Умеренный
+        - Редкий
+    validations:
+      required: true
+
+  - type: dropdown
+    id: humidity
+    attributes:
+      label: 💨 Влажность воздуха
+      options:
+        - Высокая, любит опрыскивание
+        - Обычная комнатная
+        - Не требователен
+    validations:
+      required: true
+
+  - type: textarea
+    id: fun_fact
+    attributes:
+      label: 🌿 Интересный факт
+      description: Любая интересная особенность
+      placeholder: "Чем больше света, тем белее становятся листья"
+    validations:
+      required: false
+
+  - type: textarea
+    id: care
+    attributes:
+      label: 📝 Подробный уход
+      description: Инструкция по уходу (температура, почва, подкормка, пересадка)
+      placeholder: |
+        **Температура:** 20–25°C летом, не ниже 16°C зимой.
+        **Почва:** Лёгкий, питательный субстрат.
+    validations:
+      required: true
